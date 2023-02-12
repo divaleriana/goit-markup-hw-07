@@ -305,6 +305,7 @@ img {
 
 .footer{
     background-color: var(--navy-blue-color);
+    display: flex;
 }
 
 .footer a{
@@ -671,7 +672,6 @@ textarea {
     }
 
     .footer {
-        display: flex;
         flex-direction: column;
         text-align: center;
     }
@@ -732,6 +732,24 @@ textarea {
     .contact {
         display: flex;
     }
+
+    .footer .container {
+        display: flex;
+    }
+
+    .subscribe-form {
+        display: flex;
+        gap: 24px;
+    }
+
+    .subscribe-input {
+        width: 264px;
+    }
+
+    .modal {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
 }
 
 @media screen and (min-width: 768px) and (max-width:1199px){
@@ -777,7 +795,6 @@ textarea {
     }
 
     .footer .container {
-        display: flex;
         flex-wrap: wrap;
         gap: 72px 24px;
         padding-left: 108px;
@@ -792,19 +809,6 @@ textarea {
         width: 453px;
     }
 
-    .subscribe-form {
-        display: flex;
-        gap: 24px;
-    }
-
-    .subscribe-input {
-        min-width: 264px;
-    }
-
-    .modal {
-        padding-left: 24px;
-        padding-right: 24px;
-    }
 }
 
 @media screen and (max-width:1199px) {
@@ -831,5 +835,126 @@ textarea {
 
     .customers-list {
         flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .container {
+        width: 1158px;
+    }
+
+    .section {
+        padding-top: 120px;
+        padding-bottom: 120px;
+    }
+    
+    .site-nav > a {
+        margin-right: 76px;
+    }
+    
+    .nav-list {
+        display: flex;
+        gap: 40px;
+    }
+    
+    .nav-item {
+        padding-bottom: 28px;
+    }
+
+    .contact-nav {
+        margin-left: auto;
+    }
+    
+    .contact {
+        display: flex;
+        gap: 40px;
+    }
+
+    .hero {
+        padding-top: 188px;
+        padding-bottom: 188px;
+    }
+
+    .button {
+        margin-top: 48px;
+    }
+
+    .feature-list {
+        display: flex;
+        gap: 24px;
+    }
+    
+    .feature-list p {
+        width: 264px;
+    }    
+
+    .feature-item::before {
+        content: "";
+        display: block;
+        height: 112px;
+        background: var(--light-color);
+        border-radius: 4px;
+        margin-bottom: 8px;
+    }
+    
+    .feature-item:nth-child(1)::before {
+        background-image: url(../images/satelite.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .feature-item:nth-child(2)::before {
+        background-image: url(../images/clock.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .feature-item:nth-child(3)::before {
+        background-image: url(../images/diagram.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    .feature-item:nth-child(4)::before {
+        background-image: url(../images/astronaut.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .works {
+        padding-top: 0;
+    }
+    
+    .works-title, .team-title, .customers-title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11;
+        letter-spacing: 0.02em;
+        text-transform: capitalize;
+        text-align: center;
+    }
+    
+    .device-list {
+        margin-top: 72px;
+        display: flex;
+        gap: 24px;
+    }
+
+    .team {
+        gap: 24px;
+    }
+
+    .customers-list {
+        gap: 24px;
+    }
+
+    .footer{
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    .media {
+        margin-left: 120px;
+        margin-right: 80px;
     }
 }
