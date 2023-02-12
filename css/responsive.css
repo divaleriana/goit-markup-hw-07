@@ -67,6 +67,9 @@ img {
     text-transform: uppercase;
     text-decoration: none;
     color: var(--navy-blue-color);
+
+    padding-top: 24px;
+    display: inline-block;
 }
 
 .logo > span {
@@ -74,6 +77,12 @@ img {
 }
 
 .nav-item {
+    padding-top: 24px;
+}
+
+.nav-item {
+    position: relative;
+
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
@@ -90,6 +99,21 @@ img {
 
 .nav-item:hover, .nav-item:focus {
     color: var(--iris-color)
+}
+
+.current::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    opacity: 1;
+
+    background-color: #404BBF;
+    border-radius: 2px;
 }
 
 .contact-item {
@@ -188,6 +212,10 @@ img {
     background: var(--light-color);
 }
 
+.team {
+    display: flex;
+}
+
 .works-title, .team-title, .customers-title {
     font-weight: 700;
     font-size: 36px;
@@ -197,9 +225,19 @@ img {
     text-align: center;
 }
 
+.team-title{
+    margin-bottom: 72px;
+}
+
 .member-description {
     padding-top: 32px;
     padding-bottom: 32px;
+
+    width: 264px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     background: var(--white-color);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
@@ -354,14 +392,9 @@ img {
 }
 
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
     .container{
         width: 480px;
-    }
-
-    .section {
-        padding-top: 96px;
-        padding-bottom: 96px;
     }
 
     .nav-list, .contact  {
@@ -369,13 +402,13 @@ img {
     }
 
     .main-nav {
-        height: 70px;
         display: flex;
         align-items: center;
+
+        padding-bottom: 24px;
     }
 
-    .hero {
-        padding-top: 112px;
+    .hero{
         padding-bottom: 112px;
     }
 
@@ -389,12 +422,7 @@ img {
         color: #FFFFFF;
     }
 
-    .button {
-        margin-top: 72px;
-    }
-
-    .feature-list {
-        display: flex;
+    .feature-list{
         flex-direction: column;
         gap: 72px;
     }
@@ -406,16 +434,7 @@ img {
         text-align: center;
     }
 
-    .works {
-        display: none;
-    }
-
-    .team-title {
-        margin-bottom: 72px;
-    }
-
     .team {
-        display: flex;
         flex-direction: column;
         gap: 72px;
     }
@@ -423,13 +442,6 @@ img {
     .team li {
         margin-left: auto;
         margin-right: auto;
-    }
-
-    .member-description {
-        width: 260px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
     }
 
     .customers-title {
@@ -692,5 +704,91 @@ img {
     
     .checkbox-input:checked + .checkbox-icon {
         background-image: url(../images/checkbox-active.svg);
+    }
+}
+
+@media screen and (min-width:768px){
+    .main-nav {
+        display: flex;
+        align-items: center;
+    }
+    
+    .site-nav {
+        display: flex;
+        align-items: center;
+    }
+    
+    .nav-list {
+        display: flex;
+        gap: 40px;
+    }
+    
+    .contact-nav {
+        margin-left: auto;
+    }
+    
+    .contact {
+        display: flex;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width:1199px){
+    .container {
+        max-width: 768px;
+    }
+
+    .contact{
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .logo {
+        margin-right: 123px;
+    }
+    
+    .nav-item {
+        padding-bottom: 22px;
+    }
+
+    .hero{
+        padding-bottom: 108px;
+    }
+
+    .feature-list {
+        gap: 72px 24px;
+        flex-wrap: wrap;
+    }
+
+    .feature-item {
+        max-width: calc((100% - 24px)/2);
+    }
+
+    .team{
+        gap: 64px 24px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width:1199px) {
+    .hero{
+        padding-top: 112px;
+    }
+
+    .button {
+        margin-top: 40px;
+    }
+
+    .feature-list {
+        display: flex;
+    }
+
+    .section {
+        padding-top: 96px;
+        padding-bottom: 96px;
+    }
+
+    .works {
+        display: none;
     }
 }
