@@ -15,7 +15,7 @@
     <header class="header">
         <div class="container main-nav">
             <nav class="site-nav">
-            <a href="./index.html" class="logo"><span>Web</span>Studio</a>
+                <a href="./index.html" class="logo"><span>Web</span>Studio</a>
                 <ul class="list nav-list">
                     <li><a href="./index.html" class="nav-item current">Studio</a></li>
                     <li><a href="./portfolio.html" class="nav-item">Portfolio</a></li>
@@ -28,7 +28,73 @@
                     <li><a href="tel:+110001111111" class="contact-item">+11 (000) 111-11-11</a></li>
                 </ul>
             </address>
-        </div>
+            <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              width="32"
+              height="22"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div> 
+        <div class="menu-container js-menu-container" id="mobile-menu">
+            <button class="menu-toggle js-close-menu close-modal">
+                <svg class="close-icon" width="8" height="8">
+                    <use href="./images/icons.svg#icon-closebtn"></use>
+                </svg>
+            </button>
+      
+            <ul class="mobile-menu">
+              <li><a href="./index.html" class="link">Studio</a></li>
+              <li><a href="./portfolio.html" class="link">Portfolio</a></li>
+              <li><a href="" class="link current">Contacts</a></li>
+            </ul>
+            <ul class="contact-menu list">
+                <li><a href="tel:+110001111111" class="contact-item-first">+11 (000) 111-11-11</a></li>
+                <li><a href="mailto:info@devstudio.com" class="contact-item">info@devstudio.com</a></li>
+            </ul>
+            <ul class="icons-list list">
+                <li>
+                    <a class="social-media-icon" href="">
+                        <svg class="icon">
+                            <use href="./images/icons.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a class="social-media-icon" href="">
+                        <svg class="icon">
+                            <use href="./images/icons.svg#icon-twitter"></use>
+                        </svg>
+                    </a>           
+                </li>                 
+                <li>
+                    <a class="social-media-icon" href="">
+                        <svg class="icon">
+                            <use href="./images/icons.svg#icon-facebook"></use>
+                        </svg>
+                    </a>  
+                </li>
+                <li>
+                    <a class="social-media-icon" href="">
+                        <svg class="icon">
+                            <use href="./images/icons.svg#icon-linkedin"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+          </div>    
     </header>
     <main> 
         <section class="hero">
@@ -359,5 +425,11 @@
         </div>    
     </div>
     <script src="js/modal.js"></script>
+    <script 
+        defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous">
+    </script>
+    <script defer src="js/mobile-menu.js"></script>
 </body>
 </html>
