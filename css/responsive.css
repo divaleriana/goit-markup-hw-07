@@ -40,7 +40,6 @@ img {
 }
 
 .container {
-    max-width: 1158px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
@@ -69,6 +68,7 @@ img {
     color: var(--navy-blue-color);
 
     padding-top: 24px;
+    padding-bottom: 24px;
     display: inline-block;
 }
 
@@ -428,13 +428,13 @@ img {
     top: 96px;
 
     background: #FCFCFC;
-    padding-top: 72px;
-    padding-bottom: 24px;
+    padding-top: 50%;
+    padding-bottom: 50%;
 
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 
-    transform: translate(-50%, 0) scale(1);
+    transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -610,27 +610,25 @@ textarea {
     background-image: url(../images/checkbox-active.svg);
 }
 
-@media screen and (max-width: 767px) {
-    .container{
-        width: 428px;
+@media screen and (min-width: 480px), screen and(max-width:767px) {
+    .container {
+        max-width: 428px;
     }
+}
 
+@media screen and (max-width: 767px) {
     .nav-list, .contact  {
         display: none;
     }
 
     .header {
-        position: relative;
-
-        display: flex;
         align-items: center;
     }
 
     .main-nav {
         display: flex;
         align-items: center;
-
-        padding-bottom: 24px;
+        justify-content: space-between;
     }
 
     .hero{
@@ -710,7 +708,6 @@ textarea {
     .modal {
         padding-left: 16px;
         padding-right: 16px;
-        
     }
 
     .menu .link {
@@ -836,12 +833,6 @@ textarea {
         justify-content: space-evenly;
         margin-bottom: 40px;
         margin-left: -40px;
-    }
-
-    .js-open-menu {
-        position: absolute;
-        right: 16px;
-        top: 24px;
     }
 }
 
@@ -983,7 +974,7 @@ textarea {
     }
 
     .modal {
-        top: 80px;
+        overflow-y: scroll;
     }
 }
 
