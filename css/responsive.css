@@ -833,7 +833,7 @@ textarea {
 
 @media screen and (min-width:480px), screen and (max-width:767px) {
     .container {
-        max-width: 480px;
+        width: 480px;
     }
 }
 
