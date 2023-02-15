@@ -610,12 +610,6 @@ textarea {
     background-image: url(../images/checkbox-active.svg);
 }
 
-@media screen and (min-width: 480px), screen and(max-width:767px) {
-    .container {
-        max-width: 428px;
-    }
-}
-
 @media screen and (max-width: 767px) {
     .nav-list, .contact  {
         display: none;
@@ -623,6 +617,7 @@ textarea {
 
     .header {
         align-items: center;
+        position: relative;
     }
 
     .main-nav {
@@ -833,6 +828,12 @@ textarea {
         justify-content: space-evenly;
         margin-bottom: 40px;
         margin-left: -40px;
+    }
+}
+
+@media screen and (min-width:480px), screen and (max-width:767px) {
+    .container {
+        max-width: 480px;
     }
 }
 
