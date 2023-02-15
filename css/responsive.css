@@ -425,7 +425,7 @@ img {
 .modal {
     position: absolute;
     left: 50%;
-    top: 96px;
+    top: 50%;
 
     background: #FCFCFC;
     padding-top: 50%;
