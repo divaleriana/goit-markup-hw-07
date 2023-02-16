@@ -323,6 +323,10 @@ img {
     width: 264px;
 }
 
+.footer-descr .logo {
+    padding-bottom: 0;
+}
+
 .footer-media-title, .footer-subscribe-title {
     color: var(--white-color);
     font-weight: 500;
@@ -427,7 +431,6 @@ img {
     left: 50%;
     top: 50%;
 
-    height: 586px;
     background: #FCFCFC;
     padding-top: 72px;
     padding-bottom: 24px;
@@ -498,7 +501,6 @@ img {
     min-width: 169px;
     margin-top: 24px;
     margin-left: 95px;
-    margin-bottom: 24px;
     padding: 16px 32px;
     border: 0;
     text-align: center;
@@ -610,6 +612,32 @@ textarea {
 
 .checkbox-input:checked + .checkbox-icon {
     background-image: url(../images/checkbox-active.svg);
+}
+
+@media screen and (max-width:427px) {
+    .modal {
+        top: 96px;
+        transform: translate(-50%, 0) scale(1);
+        max-width: 288px;
+    }
+
+    .modal-input {
+        width: 260px;
+    }
+
+    .form-field {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .check-flex {
+        flex-wrap: wrap;
+        width: 270px;
+    }
+
+    .modal-submit-btn {
+        margin-left: 50px;
+    }
 }
 
 @media screen and (max-width: 767px) {
@@ -913,6 +941,12 @@ textarea {
         line-height: 1.11;
     }
 
+    .member-description .title {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1.2;
+    }
+
     .feature-list {
         gap: 72px 24px;
         flex-wrap: wrap;
@@ -976,7 +1010,7 @@ textarea {
         flex-wrap: wrap;
     }
 
-    .modal {
+    .backdrop {
         overflow-y: scroll;
     }
 }
@@ -1102,7 +1136,9 @@ textarea {
     }
 }
 
-@media screen and (max-width:479px) {
+@media screen and (max-width:479px),
+ screen and (min-device-pixel-ratio: 1),
+ screen and (min-resolution: 1dppx) {
     .hero {
         background-image:         
         linear-gradient(rgba(46,47,66,0.7),
@@ -1122,7 +1158,9 @@ screen and (min-resolution: 2dppx) {
     }
 }
 
-@media screen and (min-width:480px) {
+@media screen and (min-width:480px),
+screen and (min-device-pixel-ratio: 1),
+screen and (min-resolution: 1dppx) {
     .hero {
         background-image:         
         linear-gradient(rgba(46,47,66,0.7),
