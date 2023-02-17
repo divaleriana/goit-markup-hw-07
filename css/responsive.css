@@ -1136,9 +1136,9 @@ textarea {
     }
 }
 
-@media screen and (max-width:479px),
- screen and (min-device-pixel-ratio: 1),
- screen and (min-resolution: 1dppx) {
+@media screen and (max-width:479px) and (min-device-pixel-ratio: 1),
+ screen and (-webkit-min-device-pixel-ratio: 1) and (max-width:479px),
+ screen and (min-resolution: 1dppx) and (max-width:479px) {
     .hero {
         background-image:         
         linear-gradient(rgba(46,47,66,0.7),
@@ -1147,9 +1147,10 @@ textarea {
     }
 }
 
-@media screen and (max-width:479px),
-screen and (min-device-pixel-ratio: 2), 
-screen and (min-resolution: 2dppx) {
+@media screen and (max-width:479px) and (min-device-pixel-ratio: 2),
+screen and (-webkit-min-device-pixel-ratio: 2) and (max-width:479px), 
+screen and (min-resolution: 2dppx) and (max-width:479px),
+screen and (min-resolution:192dpi) and (max-width:479px) {
     .hero {
         background-image:         
         linear-gradient(rgba(46,47,66,0.7),
@@ -1158,9 +1159,9 @@ screen and (min-resolution: 2dppx) {
     }
 }
 
-@media screen and (min-width:480px),
-screen and (min-device-pixel-ratio: 1),
-screen and (min-resolution: 1dppx) {
+@media screen and (min-width:480px) and (min-device-pixel-ratio: 1),
+screen and (-webkit-min-device-pixel-ratio: 1) and (min-width:480px),
+screen and (min-resolution: 1dppx) and (min-width:480px) {
     .hero {
         background-image:         
         linear-gradient(rgba(46,47,66,0.7),
@@ -1169,9 +1170,11 @@ screen and (min-resolution: 1dppx) {
     }
 }
 
-@media screen and (min-width:480px), 
-screen and (min-device-pixel-ratio: 2), 
-screen and (min-resolution: 2dppx) {
+@media  
+screen and (min-device-pixel-ratio: 2) and (min-width:480px), 
+screen and (-webkit-min-device-pixel-ratio: 2) and (min-width:480px),
+screen and (min-resolution: 2dppx) and (min-width:480px),
+screen and (min-resolution:192dpi) and (min-width:480px){
     .hero {
         background-image:         
         linear-gradient(rgba(46,47,66,0.7),
@@ -1180,9 +1183,10 @@ screen and (min-resolution: 2dppx) {
     }
 }
 
-@media screen and (min-width: 769px),
-screen and (min-device-pixel-ratio: 2), 
-screen and (min-resolution: 2dppx) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 769px),
+screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 769px), 
+screen and (min-resolution: 2dppx) and (min-width: 769px),
+screen and (min-resolution:192dpi) and (min-width:769px) {
     .hero {
         background-image: 
         linear-gradient(rgba(46,47,66,0.7),
