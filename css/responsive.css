@@ -114,6 +114,8 @@ img {
 
     background-color: #404BBF;
     border-radius: 2px;
+
+    margin-bottom: -2px;
 }
 
 .contact-item {
@@ -331,7 +333,7 @@ img {
     color: var(--white-color);
     font-weight: 500;
     font-size: 16px;
-    line-height: 1,5;
+    line-height: 24px;
     margin-bottom: 16px;
 }
 
@@ -614,10 +616,14 @@ textarea {
     background-image: url(../images/checkbox-active.svg);
 }
 
+@media screen and (min-width: 428px) {
+    .subscribe-input {
+        width: 398px;
+    }
+}
+
 @media screen and (max-width:427px) {
     .modal {
-        top: 96px;
-        transform: translate(-50%, 0) scale(1);
         max-width: 288px;
     }
 
@@ -637,6 +643,10 @@ textarea {
 
     .modal-submit-btn {
         margin-left: 50px;
+    }
+
+    .subscribe-input {
+        width: 100%;
     }
 }
 
@@ -722,7 +732,6 @@ textarea {
 
     .subscribe-input {
         margin-bottom: 16px;
-        width: 100%;
     }
 
     .subscribe-btn {
@@ -733,6 +742,8 @@ textarea {
     .modal {
         padding-left: 16px;
         padding-right: 16px;
+        top: 96px;
+        transform: translate(-50%, 0) scale(1);
     }
 
     .menu .link {
@@ -888,6 +899,19 @@ textarea {
     
     .contact {
         display: flex;
+        padding-top: 20px;
+        padding-bottom: 8px;
+    }
+
+    .contact-item {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: 0.04em;
+    }
+ 
+    .feature-item .title {
+        margin-bottom: 8px;
     }
 
     .footer .container {
@@ -976,6 +1000,14 @@ textarea {
 
     .footer-descr {
         min-width: 264px;
+    }
+
+    .footer-media-list {
+        margin-top: 4px;
+    }
+
+    .footer-media-title {
+        margin-bottom: 20px;
     }
 
     .subscribe {
@@ -1159,9 +1191,9 @@ screen and (min-resolution:192dpi) and (max-width:479px) {
     }
 }
 
-@media screen and (min-width:480px) and (min-device-pixel-ratio: 1),
-screen and (-webkit-min-device-pixel-ratio: 1) and (min-width:480px),
-screen and (min-resolution: 1dppx) and (min-width:480px) {
+@media screen and (min-width:480px) and (min-device-pixel-ratio: 1) and (max-width: 767px),
+screen and (-webkit-min-device-pixel-ratio: 1) and (min-width:480px) and (max-width: 767px),
+screen and (min-resolution: 1dppx) and (min-width:480px) and (max-width: 767px) {
     .hero {
         background-image:         
         linear-gradient(rgba(46,47,66,0.7),
@@ -1171,10 +1203,10 @@ screen and (min-resolution: 1dppx) and (min-width:480px) {
 }
 
 @media  
-screen and (min-device-pixel-ratio: 2) and (min-width:480px), 
-screen and (-webkit-min-device-pixel-ratio: 2) and (min-width:480px),
-screen and (min-resolution: 2dppx) and (min-width:480px),
-screen and (min-resolution:192dpi) and (min-width:480px){
+screen and (min-device-pixel-ratio: 2) and (min-width:480px) and (max-width: 767px), 
+screen and (-webkit-min-device-pixel-ratio: 2) and (min-width:480px) and (max-width: 767px),
+screen and (min-resolution: 2dppx) and (min-width:480px) and (max-width: 767px),
+screen and (min-resolution:192dpi) and (min-width:480px) and (max-width: 767px){
     .hero {
         background-image:         
         linear-gradient(rgba(46,47,66,0.7),
@@ -1183,10 +1215,10 @@ screen and (min-resolution:192dpi) and (min-width:480px){
     }
 }
 
-@media screen and (min-device-pixel-ratio: 2) and (min-width: 769px),
-screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 769px), 
-screen and (min-resolution: 2dppx) and (min-width: 769px),
-screen and (min-resolution:192dpi) and (min-width:769px) {
+@media screen and (min-device-pixel-ratio: 2) and (min-width: 768px),
+screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 768px), 
+screen and (min-resolution: 2dppx) and (min-width: 768px),
+screen and (min-resolution:192dpi) and (min-width:768px) {
     .hero {
         background-image: 
         linear-gradient(rgba(46,47,66,0.7),
